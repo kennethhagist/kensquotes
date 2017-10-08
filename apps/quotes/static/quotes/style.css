@@ -1,0 +1,12 @@
+nav > a{
+    font-size: 1.2em;
+}
+.error, .success {
+    font-weight: bold;
+}
+.error {
+    color: red;
+}
+.success {
+    color: green;
+}

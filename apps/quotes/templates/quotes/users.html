@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Quote Wall Users</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        {% load staticfiles %}
+        <link href="{% static 'quotes/style.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <p><a href="/quotes">Dashboard</a> | <a href="/logout">Logout</a></p>
+        <h1><strong>Posts by </strong>{{author.last_name}}</h1>
+        <h2><strong>Count: </strong> {{author.last_name}} : {{quotes.all.count}}</h2>
+        <hr>
+        {% for quote in quotes %}
+        <h3>{{ quote.quoted_by }} : {{ quote.quote_text }}</h3>
+        <br><br>
+        {% endfor %}
+    </body>
+</html>
